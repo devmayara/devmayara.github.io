@@ -3,24 +3,22 @@
 ## Eu sou Mayara Silva :nerd_face:
 
 Atuo na área de desenvolvimento de software, curso Análise e Desenvolvimento de Sistemas <br> 
-pela faculdade Estácio e também sou aluna do CursoEmVídeo. <br><br>
+pela faculdade Estácio e também sou aluna do CursoEmVídeo.
 
 Tenho muita curiosidade e vontade de aprender sobre novas tecnologias em geral. <br>
-Pretendo um dia me tornar uma Desenvolvedora Sênior Full Stack! <br><br>
+Pretendo um dia me tornar uma Desenvolvedora Sênior Full Stack!
 
 Aqui na minha página você pode encontrar projetos que desenvolvi durante minhas práticas, aprendizagens e estudos!
 
+- [Meu Curriculum;](https://devmayara.github.io/curriculo/)
 
+- [Projeto Site Android;](https://devmayara.github.io/Android/)
 
-https://devmayara.github.io/curriculo/
+- [Projeto Cordel;](https://devmayara.github.io/projeto-cordel/)
 
-https://devmayara.github.io/Android/
+- [Projeto Hora do Dia;](https://devmayara.github.io/hora-do-dia/)
 
-https://devmayara.github.io/projeto-cordel/
-
-https://devmayara.github.io/hora-do-dia/
-
-https://devmayara.github.io/verificador-de-idade/
+- [Projeto Verificador de Idade;](https://devmayara.github.io/verificador-de-idade/)
 
 
 
