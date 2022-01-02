@@ -20,6 +20,8 @@ Aqui na minha página você pode encontrar projetos que desenvolvi durante minha
 
 - [Projeto Verificador de Idade;](https://devmayara.github.io/verificador-de-idade/)
 
+- [Projeto Contador;](https://devmayara.github.io/contador/)
+
 
 
 
