@@ -1,6 +1,6 @@
-### Bem-vindo ao Meu GitHub Pages
+# Bem-vindo ao Meu GitHub Pages
 
-## Eu sou Mayara Silva :nerd_face:
+## Eu sou Mayara Silva
 
 Atuo na área de desenvolvimento de software, curso Análise e Desenvolvimento de Sistemas <br> 
 pela faculdade Estácio e também sou aluna do CursoEmVídeo.
