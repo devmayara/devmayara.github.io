@@ -187,5 +187,18 @@
 
     <!--===== SCRIPT JS =====-->
     <script src="assets/js/script.js"></script>
+        
+    <!--===== SCRIPT WENI - BOT =====-->
+    <script>
+      (function (d, s, u) {
+      let h = d.getElementsByTagName(s)[0], k = d.createElement(s);
+        k.onload = function () {
+        let l = d.createElement(s); l.src = u; l.async = true;
+        h.parentNode.insertBefore(l, k.nextSibling);
+       };
+      k.async = true; k.src = 'https://storage.googleapis.com/push-webchat/wwc-latest.js';
+       h.parentNode.insertBefore(k, h);
+      })(document, 'script', 'https://weni-sp-integrations-production.s3.amazonaws.com/apptypes/wwc/70c1c1bf-391e-4e76-add3-8c0fc4f368a9/script.js');
+    </script>
 </body>
 </html>
