@@ -44,6 +44,11 @@
                             <i class="uil uil-scenery nav__icon"></i>Portfólio
                         </a>
                     </li>
+                    <!-- <li class="nav__item">
+                        <a href="#certificados" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>Certificados
+                        </a>
+                    </li> -->
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="uil uil-message nav__icon"></i>Contato
@@ -607,7 +612,34 @@
             </div>
         </section>
 
-        <!--==================== PROJECT IN MIND ====================-->
+        <!--==================== CERTIFICADOS ====================
+        <section class="certificados section" id="certificados">
+            <h2 class="section__title">Certificados</h2>
+            <span class="section__subtitle">Últimos conquistados</span>
+            
+            <div class="certificados__container container swiper-container">
+                ==================== CERTIFICADOS 1 ====================
+                <div class="swiper-wrapper" id="certificados-atuais"></div>
+                
+                <a href="assets/views/certificates.html" class="button button--flex button--small certificados__button">
+                    Ver todos
+                    <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+                
+                 Add Arrows 
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-certificados-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-certificados-icon"></i>
+                </div>
+                
+                 Add Pagination 
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        ==================== PROJECT IN MIND ====================-->
         <section class="project section">
             <div class="project__bg">
                 <div class="project__container container grid">
@@ -622,7 +654,7 @@
                         </a>
                     </div>
 
-                    <img src="assets/img/project.png" alt="" class="project__img">
+                    <!-- <img src="assets/img/project.png" alt="" class="project__img"> -->
                 </div>
             </div>
         </section>
@@ -731,7 +763,7 @@
                 </div>
             </div>
 
-            <p class="footer__copy">&#169; Todos os direitos reservados.</p>
+            <p class="footer__copy">&#169; <span id="ano-atual"></span> Todos os direitos reservados.</p>
         </div>
     </footer>
     
@@ -743,7 +775,7 @@
     <!--==================== SWIPER JS ====================-->
     <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js"></script>
+    <!--==================== INDEX JS ====================-->
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

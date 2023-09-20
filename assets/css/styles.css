@@ -779,6 +779,57 @@ input[type="submit"] {
 }
 
 
+/*==================== CERTIFICADOS ====================*/
+.certificados__container {
+  overflow: initial;
+}
+
+.certificados__content {
+  padding: 0 1.5rem;
+}
+
+.certificados__data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.certificados__img {
+  width: 265px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+
+.certificados__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.certificados__description {
+  margin-bottom: var(--mb-0-75);
+}
+
+/* deixar o botao a direita */
+.certificados__button {
+  margin-top: var(--mb-0-75);
+}
+
+.certificados__link {
+  color: #fff;
+}
+
+.certificados__button:hover .button__icon {
+  transform: translateX(.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-certificados-icon {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+
+
 /*==================== PROJECT IN MIND ====================*/
 .project {
   text-align: center;

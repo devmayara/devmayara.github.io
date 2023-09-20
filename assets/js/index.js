@@ -91,7 +91,7 @@ modalCloses.forEach((modalClose) => {
 })
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper('.portfolio__container', {
+let swiper = new Swiper('.portfolio__container, .certificados__container', {
     cssMode: true,
     loop: true,
     navigation: {
@@ -169,3 +169,6 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+document.getElementById("ano-atual").textContent = new Date().getFullYear();
