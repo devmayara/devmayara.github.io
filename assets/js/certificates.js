@@ -1,58 +1,53 @@
+async function fetchCertificadosPorOrigem(origem, containerId) {
+    const certificados = await fetchCertificados();
+    const certificadosFiltrados = certificados.filter(certificado => certificado.origem === origem);
+    exibirCertificados(certificadosFiltrados, containerId, 2); // Exibir 2 por vez
+}
 
-async function fetchCertificados(origem, containerId) {
+async function fetchUltimosCertificados(numCertificados, containerId) {
+    const certificados = await fetchCertificados();
+    const certificadosOrdenados = certificados.sort((a, b) => b.id - a.id).slice(0, numCertificados);
+    exibirCertificados(certificadosOrdenados, containerId, 2); // Exibir 2 por vez
+}
+
+async function fetchCertificados() {
     const response = await fetch('https://api.sheety.co/10a45f76a1e7e57d0e6db8c4159c3a1d/developerApi/certificados');
     const data = await response.json();
+    return data.certificados;
+}
 
-    // Filtrar os certificados com a origem especificada
-    const certificados = data.certificados.filter(certificado => certificado.origem === origem);
-
+function exibirCertificados(certificados, containerId, itemsPorBloco) {
     const certificadosContainer = document.getElementById(containerId);
 
-    let currentIndex = 0;
-
-    while (currentIndex < certificados.length) {
+    for (let i = 0; i < certificados.length; i += itemsPorBloco) {
         const divCertificadosContent = document.createElement('div');
         divCertificadosContent.classList.add('certificados__content', 'grid', 'swiper-slide');
 
-        for (let i = 0; i < 2; i++) {
-            if (currentIndex < certificados.length) {
-                const divCertificadosData = document.createElement('div');
-                divCertificadosData.classList.add('certificados__data');
+        const divCertificadosData = document.createElement('div');
+        divCertificadosData.classList.add('certificados__data');
 
-                const imgCertificado1 = document.createElement('img');
-                imgCertificado1.src = certificados[currentIndex].img;
-                imgCertificado1.alt = '';
-                imgCertificado1.classList.add('certificados__img');
+        for (let j = i; j < i + itemsPorBloco && j < certificados.length; j++) {
+            const imgCertificado = document.createElement('img');
+            imgCertificado.src = certificados[j].img;
+            imgCertificado.alt = '';
+            imgCertificado.classList.add('certificados__img');
 
-                currentIndex++;
-
-                let imgCertificado2 = null;
-                if (currentIndex < certificados.length) {
-                    imgCertificado2 = document.createElement('img');
-                    imgCertificado2.src = certificados[currentIndex].img;
-                    imgCertificado2.alt = '';
-                    imgCertificado2.classList.add('certificados__img');
-
-                    currentIndex++;
-                }
-
-                divCertificadosData.appendChild(imgCertificado1);
-                if (imgCertificado2) {
-                    divCertificadosData.appendChild(imgCertificado2);
-                }
-                divCertificadosContent.appendChild(divCertificadosData);
-            }
+            divCertificadosData.appendChild(imgCertificado);
         }
 
+        divCertificadosContent.appendChild(divCertificadosData);
         certificadosContainer.appendChild(divCertificadosContent);
     }
 }
 
 // Listar os certificados para 'fsphp'
-fetchCertificados('fsphp', 'certificados-fsphp');
+fetchCertificadosPorOrigem('fsphp', 'certificados-fsphp');
 
 // Listar os certificados para 'b7web'
-fetchCertificados('b7web', 'certificados-b7web');
+fetchCertificadosPorOrigem('b7web', 'certificados-b7web');
 
 // Listar os certificados para 'dio'
-fetchCertificados('dio', 'certificados-dio');
+fetchCertificadosPorOrigem('dio', 'certificados-dio');
+
+// Listar os 8 últimos certificados independentemente da origem, exibindo 2 por bloco
+fetchUltimosCertificados(8, 'certificados-atuais');
