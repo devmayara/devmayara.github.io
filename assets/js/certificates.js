@@ -1,13 +1,14 @@
+
 async function fetchCertificadosPorOrigem(origem, containerId) {
     const certificados = await fetchCertificados();
     const certificadosFiltrados = certificados.filter(certificado => certificado.origem === origem);
-    exibirCertificados(certificadosFiltrados, containerId, 2); // Exibir 2 por vez
+    exibirCertificados(certificadosFiltrados, containerId, 2);
 }
 
 async function fetchUltimosCertificados(numCertificados, containerId) {
     const certificados = await fetchCertificados();
     const certificadosOrdenados = certificados.sort((a, b) => b.id - a.id).slice(0, numCertificados);
-    exibirCertificados(certificadosOrdenados, containerId, 2); // Exibir 2 por vez
+    exibirCertificados(certificadosOrdenados, containerId, 2);
 }
 
 async function fetchCertificados() {
@@ -49,5 +50,5 @@ fetchCertificadosPorOrigem('b7web', 'certificados-b7web');
 // Listar os certificados para 'dio'
 fetchCertificadosPorOrigem('dio', 'certificados-dio');
 
-// Listar os 8 últimos certificados independentemente da origem, exibindo 2 por bloco
+// Listar os 8 últimos certificados independentemente da origem
 fetchUltimosCertificados(8, 'certificados-atuais');
