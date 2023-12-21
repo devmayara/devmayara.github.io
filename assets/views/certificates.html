@@ -5,17 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon-16x16.png">
-
-    <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-    
-    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
-    
-    <!--==================== CSS ====================-->
     <link rel="stylesheet" href="../css/styles.css">
 
-    <title>Portfólio | Mayara Silva</title>
+    <title>Certificados | Mayara Silva</title>
 </head>
 <body>
     <!--==================== HEADER ====================-->
@@ -48,72 +43,46 @@
     <!--==================== MAIN ====================-->
     <main class="main">
 
-        <!--==================== CERTIFICADOS ====================-->
+        <!--==================== CERTIFICADOS 1 ====================-->
         <section class="certificados section" id="certificados">
-            <h2 class="section__title">Certificados</h2>
-            <hr> <br><br><br>
+            <h1 class="section__title">Certificados</h1>
 
-            <!--==================== FSPHP ====================
-            <span class="section__subtitle" style="margin-top: 50px;">Formação Full Stack PHP Developer - FSPHP</span>
-            
-            <div class="certificados__container container swiper-container">
-                ==================== CERTIFICADOS ====================
-                <div class="swiper-wrapper" id="certificados-fsphp">
-                    Certificados para 'fsphp' serão inseridos aqui
-                </div>
+            <div class="container mt-5">
+                <div class="col-md-12 mb-5">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="headingOne">
+                                <h4 class="mb-0">
+                                    Formação Full Stack PHP Developer - FSPHP
+                                </h4>
+                            </div>
                 
-                Add Arrows
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-certificados-icon"></i>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div class="card-body" id="certificados-fsphp"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
+                                <h4 class="mb-0">
+                                    B7Web
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                <div class="card-body" id="certificados-b7web"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="headingThree">
+                                <h4 class="mb-0">
+                                    Digital Innovation One - DIO
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                <div class="card-body" id="certificados-dio"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-certificados-icon"></i>
-                </div>
-                
-                Add Pagination
-                <div class="swiper-pagination"></div>
-            </div> -->
-
-            <!--==================== B7WEB ====================-->
-            <span class="section__subtitle" style="margin-top: 100px;">B7Web</span>
-            
-            <div class="certificados__container container swiper-container">
-                <!--==================== CERTIFICADOS ====================-->
-                <div class="swiper-wrapper" id="certificados-b7web">
-                    <!-- Certificados para 'b7web' serão inseridos aqui -->
-                </div>
-                
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-certificados-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-certificados-icon"></i>
-                </div>
-                
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-
-            <!--==================== DIO ====================-->
-            <span class="section__subtitle" style="margin-top: 100px;">Digital Innovation One - DIO</span>
-            
-            <div class="certificados__container container swiper-container">
-                <!--==================== CERTIFICADOS ====================-->
-                <div class="swiper-wrapper" id="certificados-dio">
-                    <!-- Certificados para 'dio' serão inseridos aqui -->
-                </div>
-                
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-certificados-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-certificados-icon"></i>
-                </div>
-                
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -129,16 +98,16 @@
                 </div>
 
                 <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/devmayara/" target="_blank" class="footer__social">
+                    <a href="https://www.linkedin.com/in/devmayara/" title="Linkedin" target="_blank" class="footer__social">
                         <i class='uil uil-linkedin-alt'></i>
                     </a>
-                    <a href="https://www.t.me/devmayara" target="_blank" class="footer__social">
+                    <a href="https://www.t.me/devmayara" title="Telegram" target="_blank" class="footer__social">
                         <i class='uil uil-telegram-alt'></i>
                     </a>
-                    <a href="https://github.com/devmayara" target="_blank" class="footer__social">
+                    <a href="https://github.com/devmayara" title="GitHub" target="_blank" class="footer__social">
                         <i class='uil uil-github-alt'></i>
                     </a>
-                    <a href="https://www.instagram.com/devmayara/" target="_blank" class="footer__social">
+                    <a href="https://www.instagram.com/devmayara/" title="Instagram" target="_blank" class="footer__social">
                         <i class='uil uil-instagram'></i>
                     </a>
                 </div>
@@ -156,5 +125,12 @@
 
     <!--==================== CERTIFICATES JS ====================-->
     <script src="../js/certificates.js"></script>
+
+    <!--==================== jQuery JS ====================-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!--==================== Popper JS ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!--==================== Bootstrap JS ====================-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>

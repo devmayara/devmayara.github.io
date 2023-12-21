@@ -118,17 +118,25 @@ body {
   color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
-
+h4 {
+  color: #fff;
+  font-weight: var(--font-semi-bold);
+}
 ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+hr {
+  border: 1px solid var(--first-color);
+  margin-bottom: var(--mb-3);
 }
 
 img {
@@ -228,6 +236,13 @@ input[type="submit"]:hover {
     box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: .3s;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    width: 100%;
+    display: block;
+    white-space: normal;
   }
 }
 
@@ -392,6 +407,7 @@ input[type="submit"] {
 .button--white {
   background-color: #fff;
   color: var(--first-color);
+  margin-bottom: 1rem;
 }
 
 .button--white:hover {
@@ -600,7 +616,7 @@ input[type="submit"] {
   width: 1px;
   height: 100%;
   background-color: var(--first-color);
-  transform: translate(6px, -7px);
+  transform: translate(6px, -6px);
 }
 
 .qualification [data-content] {
@@ -620,7 +636,7 @@ input[type="submit"] {
 /*==================== SERVICES ====================*/
 .services__container {
   gap: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
 }
 
 .services__content {
@@ -780,39 +796,16 @@ input[type="submit"] {
 
 
 /*==================== CERTIFICADOS ====================*/
-.certificados__container {
-  overflow: initial;
+.collapse {
+  background-color: var(--body-color);
 }
-
-.certificados__content {
-  padding: 0 1.5rem;
+.card-header {
+  background-color: var(--first-color);
 }
-
-.certificados__data {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+.card-header:hover {
+  background-color: var(--first-color);
+  text-decoration: none;
 }
-
-.certificados__img {
-  width: 265px;
-  border-radius: .5rem;
-  justify-self: center;
-}
-
-.certificados__button {
-  margin-top: var(--mb-1);
-}
-
-.certificados__link {
-  color: #fff;
-}
-
-.swiper-certificados-icon {
-  font-size: 2rem;
-  color: var(--first-color);
-}
-
 
 /*==================== PROJECT IN MIND ====================*/
 .project {
@@ -1027,7 +1020,7 @@ input[type="submit"] {
   }
 
   .services__container {
-    grid-template-columns: max-content;
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
   }
   .services__content {
@@ -1044,7 +1037,7 @@ input[type="submit"] {
 
 
 /* Medium devices */
-@media screen and (min-width: 568px) {
+@media screen and (min-width: 480px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
   }
