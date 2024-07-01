@@ -116,6 +116,14 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 h1, h2, h3 {
@@ -805,6 +813,21 @@ input[type="submit"] {
 .card-header:hover {
   background-color: var(--first-color);
   text-decoration: none;
+}
+/* Ajuste para as imagens dos certificados */
+.certificados__img {
+    max-width: 100%; 
+    height: auto; 
+    display: inline; 
+    margin: 5px; 
+}
+
+.certificados__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(33.33% - 10px); 
+    margin-bottom: 20px;
 }
 
 /*==================== PROJECT IN MIND ====================*/

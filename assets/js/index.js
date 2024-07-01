@@ -170,5 +170,80 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+/*==================== ATUALIZAR IDADE DINAMICAMENTE ====================*/
+function calcularIdade(dataNascimento) {
+    const hoje = new Date();
+    const anoAtual = hoje.getFullYear();
+    const mesAtual = hoje.getMonth();
+    const diaAtual = hoje.getDate();
 
+    const anoNascimento = dataNascimento.getFullYear();
+    const mesNascimento = dataNascimento.getMonth();
+    const diaNascimento = dataNascimento.getDate();
+
+    let idade = anoAtual - anoNascimento;
+
+    // Verifica se o aniversário ainda não ocorreu neste ano
+    if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+        idade--;
+    }
+
+    return idade;
+}
+
+// Data de nascimento
+const dataNascimento = new Date('1996-06-15'); // Substitua pelo seu ano de nascimento
+
+// Calcula a idade
+const idade = calcularIdade(dataNascimento);
+
+// Exibe a idade no elemento com id 'age'
+document.getElementById('age').textContent = idade;
+
+/*==================== ATUALIZAR TEMPO DEDICADO ====================*/
+function calcularTempoDedicado(dataInicio) {
+    const hoje = new Date();
+    const anoAtual = hoje.getFullYear();
+    const mesAtual = hoje.getMonth();
+    const diaAtual = hoje.getDate();
+
+    const anoInicio = dataInicio.getFullYear();
+    const mesInicio = dataInicio.getMonth();
+    const diaInicio = dataInicio.getDate();
+
+    let anos = anoAtual - anoInicio;
+    let meses = mesAtual - mesInicio;
+
+    if (meses < 0) {
+        anos--;
+        meses += 12;
+    } else if (meses === 0 && diaAtual < diaInicio) {
+        anos--;
+        meses = 11;
+    }
+
+    return { anos, meses };
+}
+
+// Data de início (substitua pela sua data de início)
+const dataInicio = new Date('2021-07-08');
+
+// Calcula o tempo dedicado
+const tempoDedicado = calcularTempoDedicado(dataInicio);
+
+// Converte o tempo dedicado para texto
+let textoTempoDedicado = '';
+if (tempoDedicado.anos === 0) {
+    textoTempoDedicado = `${tempoDedicado.anos} ano`;
+} else {
+    textoTempoDedicado = `${tempoDedicado.anos} ${tempoDedicado.anos === 1 ? 'ano' : 'anos'}`;
+    if (tempoDedicado.meses > 0) {
+        textoTempoDedicado += ` e ${tempoDedicado.meses} ${tempoDedicado.meses === 1 ? 'mês' : 'meses'}`;
+    }
+}
+
+// Exibe o tempo dedicado no elemento com id 'tempo-dedicado'
+document.getElementById('tempo-dedicado').textContent = textoTempoDedicado;
+
+/*==================== ATUALIZAR ANO ATUAL ====================*/
 document.getElementById("ano-atual").textContent = new Date().getFullYear();

@@ -2,13 +2,13 @@
 async function fetchCertificadosPorOrigem(origem, containerId) {
     const certificados = await fetchCertificados();
     const certificadosFiltrados = certificados.filter(certificado => certificado.origem === origem);
-    exibirCertificados(certificadosFiltrados, containerId, 2);
+    exibirCertificados(certificadosFiltrados, containerId, 3);
 }
 
 async function fetchUltimosCertificados(numCertificados, containerId) {
     const certificados = await fetchCertificados();
     const certificadosOrdenados = certificados.sort((a, b) => b.id - a.id).slice(0, numCertificados);
-    exibirCertificados(certificadosOrdenados, containerId, 2);
+    exibirCertificados(certificadosOrdenados, containerId, 3);
 }
 
 async function fetchCertificados() {
@@ -22,10 +22,7 @@ function exibirCertificados(certificados, containerId, itemsPorBloco) {
 
     for (let i = 0; i < certificados.length; i += itemsPorBloco) {
         const divCertificadosContent = document.createElement('div');
-        divCertificadosContent.classList.add('certificados__content', 'grid', 'swiper-slide');
-
-        const divCertificadosData = document.createElement('div');
-        divCertificadosData.classList.add('certificados__data');
+        divCertificadosContent.classList.add('certificados__content', 'grid');
 
         for (let j = i; j < i + itemsPorBloco && j < certificados.length; j++) {
             const imgCertificado = document.createElement('img');
@@ -33,10 +30,31 @@ function exibirCertificados(certificados, containerId, itemsPorBloco) {
             imgCertificado.alt = '';
             imgCertificado.classList.add('certificados__img');
 
+            const divCertificadosData = document.createElement('div');
+            divCertificadosData.classList.add('certificados__data');
             divCertificadosData.appendChild(imgCertificado);
+
+            if (j + 1 < certificados.length) {
+                const imgCertificado2 = document.createElement('img');
+                imgCertificado2.src = certificados[j + 1].img;
+                imgCertificado2.alt = '';
+                imgCertificado2.classList.add('certificados__img');
+                divCertificadosData.appendChild(imgCertificado2);
+            }
+
+            if (j + 2 < certificados.length) {
+                const imgCertificado3 = document.createElement('img');
+                imgCertificado3.src = certificados[j + 2].img;
+                imgCertificado3.alt = '';
+                imgCertificado3.classList.add('certificados__img');
+                divCertificadosData.appendChild(imgCertificado3);
+            }
+
+            divCertificadosContent.appendChild(divCertificadosData);
+            j += 2;
         }
 
-        divCertificadosContent.appendChild(divCertificadosData);
+        // Adiciona o conteúdo completo ao contêiner principal
         certificadosContainer.appendChild(divCertificadosContent);
     }
 }
