@@ -192,7 +192,7 @@ function calcularIdade(dataNascimento) {
 }
 
 // Data de nascimento
-const dataNascimento = new Date('1996-06-15'); // Substitua pelo seu ano de nascimento
+const dataNascimento = new Date('1995-10-09');
 
 // Calcula a idade
 const idade = calcularIdade(dataNascimento);
@@ -244,6 +244,3 @@ if (tempoDedicado.anos === 0) {
 
 // Exibe o tempo dedicado no elemento com id 'tempo-dedicado'
 document.getElementById('tempo-dedicado').textContent = textoTempoDedicado;
-
-/*==================== ATUALIZAR ANO ATUAL ====================*/
-document.getElementById("ano-atual").textContent = new Date().getFullYear();
