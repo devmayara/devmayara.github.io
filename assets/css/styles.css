@@ -80,6 +80,16 @@ body.dark-theme {
   --container-color: hsl(var(--hue-color), 29%, 16%);
 }
 
+/* Dark theme adjustments for qualification buttons */
+body.dark-theme .qualification__button:hover {
+  background-color: var(--input-color);
+}
+
+body.dark-theme .qualification__button.qualification__active {
+  background-color: hsl(var(--hue-color), 69%, 20%);
+  border-color: var(--first-color);
+}
+
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -572,21 +582,60 @@ input[type="submit"] {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2);
+  gap: 1rem;
 }
 
 .qualification__button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  background-color: transparent;
+  border: 2px solid transparent;
+  position: relative;
+  user-select: none;
 }
 
 .qualification__button:hover {
   color: var(--first-color);
+  background-color: var(--input-color);
+  transform: translateY(-2px);
+}
+
+.qualification__button.qualification__active {
+  color: var(--first-color);
+  background-color: var(--first-color-lighter);
+  border-color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.qualification__button.qualification__active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background-color: var(--first-color);
+  border-radius: 2px;
 }
 
 .qualification__icon {
   font-size: 1.8rem;
   margin-right: var(--mb-0-25);
+  transition: transform 0.3s ease;
+}
+
+.qualification__button:hover .qualification__icon {
+  transform: scale(1.1);
+}
+
+.qualification__button.qualification__active .qualification__icon {
+  transform: scale(1.15);
 }
 
 .qualification__data {
@@ -633,11 +682,6 @@ input[type="submit"] {
 
 .qualification__active[data-content] {
   display: block;
-}
-
-.qualification__button,
-.qualification__active {
-  color: var(--first-color);
 }
 
 
