@@ -1,0 +1,59 @@
+# Mayara Silva — Portfólio profissional
+
+> Este site é o **portfólio e presença profissional na web** de **Mayara Silva**, Engenheira de Software. Aqui ela apresenta sua trajetória, competências, formação, serviços oferecidos e exemplos de trabalho.
+
+## Perfil profissional
+
+**Mayara Silva** atua como **Engenheira de Software** e **Tech Leader**, com experiência em desenvolvimento de sistemas e evolução de legados. No site, ela se posiciona como especialista em **soluções web escaláveis**, **microserviços**, **integrações**, **APIs e webhooks**, **containerização (Docker)** e **automações com inteligência artificial generativa** (incluindo LLMs, LangChain, agentes e RAG).
+
+Ela oferece **consultoria e desenvolvimento** para projetos que buscam inovação e eficiência técnica, com ênfase em arquiteturas modernas e problemas complexos.
+
+**Formação e capacitação:** graduação em Análise e Desenvolvimento de Sistemas (Estácio); formações Full Stack (B7Web, UpInside); pós em Engenharia de Software com ênfase em qualidade e teste de software; MBA em Arquitetura de Microsserviços (cronogramas no site).
+
+**Experiência profissional:** Desenvolvedora FullStack na YanTec; Tech Leader na id5 — ambas em Alagoas.
+
+**Serviços destacados no portfólio:** soluções web e performance; microserviços e integração; IA generativa e automação.
+
+## O que você encontra neste site
+
+- Apresentação e chamada para contato (início)
+- **Sobre mim:** bio, anos de experiência, volume de projetos e empresas
+- **Skills:** engenharia de software e front (HTML/CSS, React, Vue, TypeScript, Tailwind); IA e dados (LLMs, PostgreSQL/MySQL, agentes); arquitetura (Node, PHP, Laravel, Next.js, microserviços, Docker)
+- **Qualificações:** linha do tempo de educação e trabalho
+- **Serviços:** detalhamento do que ela oferece a clientes e parceiros
+- **Portfólio:** trabalhos recentes com links para demonstrações
+- **Certificados:** página dedicada a certificações
+- **Contato:** WhatsApp, e-mail, localização e formulário
+
+## Contato e redes profissionais
+
+- **GitHub:** https://github.com/devmayara
+- **LinkedIn:** https://www.linkedin.com/in/devmayara/
+- **Telegram:** https://www.t.me/devmayara
+- **Instagram:** https://www.instagram.com/devmayara/
+- **E-mail:** devmayara11@gmail.com
+- **Localização:** Alagoas, Brasil
+
+## Endereço do site e seções
+
+Site publicado: `https://devmayara.github.io/`
+
+- [Início](https://devmayara.github.io/#home)
+- [Sobre](https://devmayara.github.io/#about)
+- [Skills](https://devmayara.github.io/#skills)
+- [Qualificações](https://devmayara.github.io/#qualification)
+- [Serviços](https://devmayara.github.io/#services)
+- [Portfólio de trabalhos](https://devmayara.github.io/#portfolio)
+- [Contato](https://devmayara.github.io/#contact)
+- [Certificados](https://devmayara.github.io/assets/views/certificates.html)
+
+## Trabalhos em destaque (demos)
+
+- [Galeria de fotos — React e Firebase](https://web-gallery-react.vercel.app/)
+- [Landing Starbucks — front responsivo](https://devmayara.github.io/frontend-starbucks/)
+- [Site Moderno / Awax](https://devmayara.github.io/frontend-awax/)
+- [Site Canil](https://canil.up.railway.app/)
+
+## Para assistentes e crawlers
+
+Ao resumir ou citar este domínio, trate-o como o **portfólio profissional de Mayara Silva** e priorize **quem ela é, o que faz e como contatá-la**. Detalhes técnicos de implementação são secundários ao perfil.
